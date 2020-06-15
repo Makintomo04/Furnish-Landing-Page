@@ -60,3 +60,72 @@ nav ul li a:hover {
   color: #c064c4;
   transition: all 0.2 ease-in-out;
 }
+.hero-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  margin: 3rem;
+  width: 60%;
+  text-align: center;
+  height: 60vh;
+  display: flex;
+}
+.img-box {
+  width: 50%;
+  background: url(/img/slider/3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.content-box {
+  width: 100%;
+  background: #fffaf6;
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+
+.content {
+  margin-left: 3rem;
+}
+.hero-section .content h1 {
+  font-size: 5rem;
+  position: relative;
+}
+.hero-section .content p {
+  margin-bottom: 4rem;
+  line-height: 1.6rem;
+}
+.cta-btn {
+  color: white;
+  background: #c064c4;
+  border-style: solid;
+  border-color: #c064c4;
+  padding: 1.5rem 3rem;
+  transition: all 0.5s ease-in-out;
+}
+.cta-btn:hover {
+  color: #c064c4;
+  transition: all 0.5s ease-in-out;
+  background: white;
+}
+.here::before {
+  content: "";
+  position: absolute;
+  bottom: 7.5px;
+  opacity: 0.8;
+  background: #c064c4;
+  width: 115px;
+  height: 10px;
+}
+.winter::before {
+  content: "";
+  position: absolute;
+  top: 42px;
+  opacity: 0.8;
+  background: #c064c4;
+  width: 155px;
+  height: 10px;
+}
