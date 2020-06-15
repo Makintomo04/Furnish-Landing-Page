@@ -1,0 +1,62 @@
+@font-face {
+  font-family: "Linelcons";
+  src: url(/fonts/LineIcons.eot) format("embedded-opentype");
+  src: url(/fonts/LineIcons.woff) format("woff");
+  src: url(/fonts/LineIcons.ttf) format("truetype");
+  src: url(/fonts/LineIcons.svg) format("svg");
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "LinelFonts", sans-serif;
+}
+/*GLOBAL STYLES*/
+a {
+  text-decoration: none;
+  color: #777777;
+}
+li {
+  list-style: none;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+/*NAVIGATION BAR*/
+header {
+  display: flex;
+  width: 60%;
+  margin: auto;
+  padding: 3rem 0;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header img {
+  width: 15rem;
+  height: 5rem;
+  max-width: 100%;
+}
+nav {
+}
+nav ul {
+  display: flex;
+
+  justify-content: space-evenly;
+}
+nav ul li {
+  margin: 0 0 0 3.6rem;
+}
+.active {
+  color: #c064c4;
+}
+nav ul li a:hover {
+  color: #c064c4;
+  transition: all 0.2 ease-in-out;
+}
