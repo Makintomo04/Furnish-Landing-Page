@@ -5,6 +5,7 @@
   src: url(/fonts/LineIcons.ttf) format("truetype");
   src: url(/fonts/LineIcons.svg) format("svg");
 }
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 *,
 *::before,
 *::after {
@@ -16,7 +17,7 @@ html {
   font-size: 62.5%;
 }
 body {
-  font-family: "LinelFonts", sans-serif;
+  font-family: "poppins", "LinelFonts", sans-serif;
 }
 /*GLOBAL STYLES*/
 a {
@@ -28,7 +29,17 @@ li {
   font-size: 1.6rem;
   font-weight: 600;
 }
+p {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 3.2rem;
+}
 /*NAVIGATION BAR*/
+
 header {
   display: flex;
   width: 60%;
@@ -36,6 +47,7 @@ header {
   padding: 3rem 0;
   justify-content: space-between;
   align-items: center;
+  overflow: hidden;
 }
 
 header img {
@@ -44,6 +56,7 @@ header img {
   max-width: 100%;
 }
 nav {
+  overflow: hidden;
 }
 nav ul {
   display: flex;
@@ -58,20 +71,24 @@ nav ul li {
 }
 nav ul li a:hover {
   color: #c064c4;
-  transition: all 0.2 ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .hero-section {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  padding-bottom: 10rem;
+  overflow: hidden;
 }
 .container {
-  margin: 3rem;
-  width: 60%;
+  margin: 0 10rem;
+  width: 100%;
   text-align: center;
-  height: 60vh;
+  height: 75vh;
   display: flex;
+  position: relative;
 }
 .img-box {
   width: 50%;
@@ -81,51 +98,171 @@ nav ul li a:hover {
 }
 .content-box {
   width: 100%;
-  background: #fffaf6;
+  background: #fff6fb;
+  background: linear-gradient(
+    61deg,
+    rgba(255, 246, 251, 1) 0%,
+    rgba(255, 255, 255, 1) 100%
+  );
   display: flex;
   align-items: center;
   text-align: left;
+  position: relative;
 }
 
 .content {
-  margin-left: 3rem;
+  margin-left: 12rem;
+  position: relative;
 }
 .hero-section .content h1 {
-  font-size: 5rem;
+  font-size: 9.2rem;
   position: relative;
+  line-height: 12rem;
+  padding-bottom: 1rem;
 }
 .hero-section .content p {
   margin-bottom: 4rem;
-  line-height: 1.6rem;
+  color: #777777;
 }
 .cta-btn {
   color: white;
   background: #c064c4;
-  border-style: solid;
-  border-color: #c064c4;
-  padding: 1.5rem 3rem;
-  transition: all 0.5s ease-in-out;
+  border: 0.1rem solid #c064c4;
+  padding: 1.2rem 4rem;
+
+  font-size: 1.8rem;
 }
 .cta-btn:hover {
   color: #c064c4;
-  transition: all 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
   background: white;
 }
 .here::before {
   content: "";
   position: absolute;
-  bottom: 7.5px;
+  bottom: 32.5px;
   opacity: 0.8;
   background: #c064c4;
-  width: 115px;
+  width: 225px;
   height: 10px;
 }
 .winter::before {
   content: "";
   position: absolute;
-  top: 42px;
+  top: 87.5px;
   opacity: 0.8;
   background: #c064c4;
-  width: 155px;
+  width: 320px;
   height: 10px;
+}
+.discount-sticker {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  z-index: 6;
+  position: absolute;
+  top: 7.5rem;
+  left: 50rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #c064c4;
+}
+.discount-sticker h2 {
+  color: white;
+}
+.social-bar {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  bottom: 0;
+  width: 100%;
+  justify-content: space-between;
+  padding: 2rem 3rem 2rem 12rem;
+}
+.line {
+  width: 70rem;
+  height: 1px;
+  background: #c064c4;
+}
+.social-icons ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+.social-icons ul li img {
+  height: 3rem;
+  padding: 0.5rem;
+  margin-left: 2rem;
+  border: 0.1rem solid #777777;
+  opacity: 0.8;
+}
+/*VIEW COLLECTION SECTION*/
+.view-collection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 60%;
+  margin: auto;
+  padding-bottom: 10rem;
+  text-align: center;
+}
+.left-card {
+  width: 55rem;
+  height: 30rem;
+  background: url(/img/discount-product/product-1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 3rem;
+  transition: transform 0.4s ease;
+}
+.right-card {
+  width: 55rem;
+  height: 30rem;
+  background: url(/img/discount-product/product-2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: left;
+  padding: 3rem;
+  transition: transform 0.4s ease;
+}
+.view-collection h2 {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #333333;
+  padding-bottom: 2rem;
+  line-height: 3.6rem;
+}
+.view-collection a {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.right-card:hover,
+.right-card:focus {
+  transform: scale(1.1);
+  transition: transform 0.4s ease;
+}
+.left-card:hover,
+.left-card:focus {
+  transform: scale(1.1);
+  transition: transform 0.4s ease;
+}
+.collection-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+.left-card-content {
+  position: absolute;
+  z-index: 3;
+  top: 4rem;
+  left: 4rem;
+  text-align: left;
+}
+.right-card-content {
+  position: absolute;
+  z-index: 3;
+  top: 4rem;
+  left: 4rem;
+  text-align: left;
 }
