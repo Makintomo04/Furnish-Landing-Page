@@ -15,6 +15,7 @@
 }
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 body {
   font-family: "poppins", "LinelFonts", sans-serif;
@@ -38,8 +39,43 @@ h2 {
   font-weight: 700;
   line-height: 3.2rem;
 }
+h3,
+h4 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 2.6rem;
+}
 /*NAVIGATION BAR*/
-
+#btt {
+  width: 5rem;
+  height: 5rem;
+  background: #c064c4;
+  z-index: 8;
+  position: fixed;
+  right: 4rem;
+  bottom: 4rem;
+  padding: 0;
+  background: #c064c4;
+  border: 0.1rem solid #c064c4;
+  cursor: pointer;
+  display: none;
+  transition: color, background0.5s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#btt:hover {
+  color: #c064c4;
+  transition: 0.5s ease-in-out;
+  background: white;
+}
+#btt {
+}
+.uparrow {
+  color: #fff6fb;
+  height: 3rem;
+  margin: 1rem;
+}
 header {
   display: flex;
   width: 60%;
@@ -95,6 +131,7 @@ nav ul li a:hover {
   background: url(/img/slider/3.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 }
 .content-box {
   width: 100%;
@@ -119,12 +156,14 @@ nav ul li a:hover {
   position: relative;
   line-height: 12rem;
   padding-bottom: 1rem;
+  animation: enter 0.5s ease;
+  z-index: 2;
 }
 .hero-section .content p {
   margin-bottom: 4rem;
   color: #777777;
 }
-.cta-btn {
+.btn {
   color: white;
   background: #c064c4;
   border: 0.1rem solid #c064c4;
@@ -132,7 +171,7 @@ nav ul li a:hover {
 
   font-size: 1.8rem;
 }
-.cta-btn:hover {
+.btn:hover {
   color: #c064c4;
   transition: 0.5s ease-in-out;
   background: white;
@@ -196,6 +235,7 @@ nav ul li a:hover {
   border: 0.1rem solid #777777;
   opacity: 0.8;
 }
+
 /*VIEW COLLECTION SECTION*/
 .view-collection {
   display: flex;
@@ -237,6 +277,7 @@ nav ul li a:hover {
 .view-collection a {
   font-size: 1.4rem;
   font-weight: 600;
+  transition: color 0.25s ease-in-out;
 }
 .right-card:hover,
 .right-card:focus {
@@ -265,4 +306,66 @@ nav ul li a:hover {
   top: 4rem;
   left: 4rem;
   text-align: left;
+}
+.left-card-content a:hover {
+  color: #c064c4;
+  transition: color 0.25s ease-in-out;
+}
+.right-card-content a:hover {
+  color: #c064c4;
+  transition: color 0.25s ease-in-out;
+}
+
+/*SERVICES*/
+.service-container {
+  padding-top: 10rem;
+  height: 100vh;
+  width: 60%;
+  margin: auto;
+  display: flex;
+}
+.service-container img {
+  height: 50rem;
+  padding-bottom: 5rem;
+}
+#services {
+  background: rgba(255, 246, 251, 1);
+}
+.intro {
+  flex: 2 1 50px;
+}
+.intro h2 {
+  font-size: 3.4rem;
+  padding-bottom: 2rem;
+}
+.intro h3 {
+  color: #c064c4;
+  padding-bottom: 5rem;
+}
+.intro p {
+  color: #777777;
+  padding-bottom: 5rem;
+}
+.services-grid {
+  flex: 2 1 50px;
+  display: flex;
+}
+
+.our-story-midline {
+  width: 20rem;
+  height: 0.2rem;
+  background: #c064c4;
+}
+.readmore-btn {
+}
+/*ANIMATIONS*/
+@keyframes enter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
