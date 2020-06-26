@@ -115,7 +115,7 @@ nav ul li a:hover {
   justify-content: center;
   align-items: center;
   position: relative;
-  padding-bottom: 10rem;
+
   overflow: hidden;
 }
 .container {
@@ -125,15 +125,20 @@ nav ul li a:hover {
   height: 75vh;
   display: flex;
   position: relative;
+  flex-wrap: wrap;
 }
 .img-box {
-  width: 50%;
+  flex: 1 1 60rem;
+  width: 100%;
   background: url(/img/slider/3.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  object-fit: cover;
   background-position: center;
+  position: relative;
 }
 .content-box {
+  flex: 2 1 60rem;
   width: 100%;
   background: #fff6fb;
   background: linear-gradient(
@@ -200,7 +205,7 @@ nav ul li a:hover {
   z-index: 6;
   position: absolute;
   top: 7.5rem;
-  left: 50rem;
+  right: -65px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -240,13 +245,21 @@ nav ul li a:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  width: 60%;
-  margin: auto;
-  padding-bottom: 10rem;
+  align-content: center;
+  max-width: 60%;
+  margin: 0 auto;
+  padding: 6rem;
   text-align: center;
 }
+.collection-wrapper {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  min-width: 100px;
+  margin-top: 2rem;
+}
 .left-card {
-  width: 55rem;
+  width: 50rem;
   height: 30rem;
   background: url(/img/discount-product/product-1.jpg);
   background-size: cover;
@@ -254,9 +267,10 @@ nav ul li a:hover {
   background-repeat: no-repeat;
   padding: 3rem;
   transition: transform 0.4s ease;
+  flex: 1 1 40rem;
 }
 .right-card {
-  width: 55rem;
+  width: 50rem;
   height: 30rem;
   background: url(/img/discount-product/product-2.jpg);
   background-size: cover;
@@ -265,6 +279,7 @@ nav ul li a:hover {
   text-align: left;
   padding: 3rem;
   transition: transform 0.4s ease;
+  flex: 1 1 40rem;
 }
 .view-collection h2 {
   font-size: 2.4rem;
@@ -288,10 +303,7 @@ nav ul li a:hover {
   transform: scale(1.1);
   transition: transform 0.4s ease;
 }
-.collection-wrapper {
-  position: relative;
-  overflow: hidden;
-}
+
 .left-card-content {
   position: absolute;
   z-index: 3;
@@ -318,20 +330,24 @@ nav ul li a:hover {
 /*SERVICES*/
 .service-container {
   padding-top: 10rem;
-  height: 100vh;
+  height: 100%;
   width: 60%;
   margin: auto;
   display: flex;
+  flex-wrap: wrap;
 }
 .service-container img {
   height: 50rem;
-  padding-bottom: 5rem;
+  padding: 5rem 5rem 5rem 0;
+  object-fit: cover;
 }
 #services {
   background: rgba(255, 246, 251, 1);
 }
 .intro {
-  flex: 2 1 50px;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 50rem;
 }
 .intro h2 {
   font-size: 3.4rem;
@@ -346,17 +362,35 @@ nav ul li a:hover {
   padding-bottom: 5rem;
 }
 .services-grid {
-  flex: 2 1 50px;
-  display: flex;
+  flex: 1 1 50rem;
+  display: grid;
+  padding: 5rem;
+  grid-template-columns: repeat(2, 1fr);
+  min-height: 50vh;
+  max-height: 75vh;
 }
+.service {
+  text-align: center;
 
+  padding: 1rem;
+}
+.service h2 {
+  color: #c064c4;
+}
+.service i {
+  font-size: 5rem;
+  padding: 5rem;
+}
 .our-story-midline {
   width: 20rem;
   height: 0.2rem;
   background: #c064c4;
 }
 .readmore-btn {
+  margin-top: 5rem;
+  max-width: 100%;
 }
+
 /*ANIMATIONS*/
 @keyframes enter {
   from {
@@ -366,5 +400,11 @@ nav ul li a:hover {
   to {
     opacity: 1;
     transform: translateY(0px);
+  }
+}
+
+@media screen and (max-width: 1866px) {
+  .view-collection {
+    justify-content: center;
   }
 }
