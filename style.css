@@ -130,7 +130,7 @@ nav ul li a:hover {
 .img-box {
   flex: 1 1 60rem;
   width: 100%;
-  background: url(/img/slider/3.jpg);
+  background: url(./img/slider/3.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   object-fit: cover;
@@ -261,7 +261,7 @@ nav ul li a:hover {
 .left-card {
   width: 50rem;
   height: 30rem;
-  background: url(/img/discount-product/product-1.jpg);
+  background: url(./img/discount-product/product-1.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -272,7 +272,7 @@ nav ul li a:hover {
 .right-card {
   width: 50rem;
   height: 30rem;
-  background: url(/img/discount-product/product-2.jpg);
+  background: url(./img/discount-product/product-2.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
