@@ -1,4 +1,4 @@
-const backToTop = document.querySelector("#btt");
+/*const backToTop = document.querySelector("#btt");
 window.onscroll = function () {
   scrollFunction();
 };
@@ -13,3 +13,4 @@ function scrollFunction() {
 backToTop.addEventListener("click", () => {
   document.documentElement.scrollTop = 0;
 });
+*/
