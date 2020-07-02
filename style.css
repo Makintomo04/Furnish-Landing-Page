@@ -760,9 +760,50 @@ nav ul li a:hover {
   cursor: pointer;
 }
 
+#testimonials {
+  height: 50vh;
+  margin-bottom: 20rem;
+  width: 100%;
+  background: url(./img/testimonial/ts-bg.jpg);
+}
+.testimonial-container {
+  position: absolute;
+  max-width: 45.8rem;
+  max-height: 100%;
+  left: 0;
+  bottom: -22.5rem;
+  background: #c164c4da;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 4rem 2.5rem 5rem;
+}
+.test-content {
+  color: white;
+}
+.test-content i {
+  font-size: 6.4rem;
+  margin-bottom: 3rem;
+}
+.author-test h4 {
+  font-size: 1.8rem;
+}
+.author-test h5 {
+  font-size: 1.6rem;
+}
+.test-content p {
+  line-height: 4.8rem;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+#testimonials .container1 {
+  position: relative;
+  height: 100%;
+}
+
 #contact {
   text-align: center;
-  background: var(--bg-purple);
   padding: 12.5rem 0 13rem 0;
 }
 #contact h2 {
@@ -772,7 +813,7 @@ nav ul li a:hover {
   padding: 4rem;
   background: white;
   width: 100%;
-  box-shadow: 0px 9px 11px 3px rgba(0, 0, 0, 0.116);
+  box-shadow: 0px 0px 11px 3px rgba(0, 0, 0, 0.116);
   margin-top: 7rem;
 }
 .form-container i {
@@ -1087,6 +1128,26 @@ form #message {
     top: 100px;
     width: 50px;*/
   }
+  .form-container {
+    flex-direction: column;
+  }
+  .text-input {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #user-name {
+    margin-right: 0;
+  }
+  #email {
+    margin-top: 3rem;
+    padding: 1.5rem;
+    margin-left: 0;
+  }
+  .testimonial-container {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+  }
 }
 @media screen and (max-width: 887px) {
   #team .grid .grid-item:first-child {
@@ -1141,6 +1202,9 @@ form #message {
   #blog {
     padding: 5rem 0;
   }
+  #blog .blog-intro {
+    width: 100%;
+  }
   .fixed-head .container1 img {
     width: 10rem;
     height: 4.5rem;
@@ -1156,5 +1220,43 @@ form #message {
   }
   .fixed-head .container1 .ham:last-child {
     margin-bottom: 0;
+  }
+  #contact h2 {
+    font-size: 4rem;
+  }
+  .form-container {
+    padding: 2rem;
+  }
+  #contact .btn {
+    width: 100%;
+  }
+  .test-content i {
+    font-size: 4.8rem;
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (max-width: 420px) {
+  .form-info > div {
+    display: flex;
+
+    flex-direction: column;
+  }
+  .test-content i {
+    font-size: 3.2rem;
+    margin-bottom: 1.5rem;
+  }
+  .test-content p {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+  .form-info h3 {
+    text-align: center;
+    padding-left: 0;
+    margin-top: 1.5rem;
+  }
+  .form-info h4 {
+    text-align: center;
+    padding-left: 0;
+    margin-top: 1.5rem;
   }
 }
