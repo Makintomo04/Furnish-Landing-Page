@@ -372,14 +372,14 @@ nav ul li a:hover {
 .left-card-content {
   position: absolute;
   z-index: 3;
-  top: 6rem;
+  top: 10rem;
   left: 4rem;
   text-align: left;
 }
 .right-card-content {
   position: absolute;
   z-index: 3;
-  top: 6rem;
+  top: 10rem;
   left: 4rem;
   text-align: left;
 }
@@ -410,7 +410,7 @@ nav ul li a:hover {
 #services .container1 img {
   width: 100%;
   height: 50rem;
-  padding: 5rem 5rem 5rem 0;
+  padding: 0rem 5rem 5rem 0;
   object-fit: cover;
 }
 #services .container1 {
@@ -446,21 +446,24 @@ nav ul li a:hover {
   display: grid;
   padding: 0;
   text-align: center;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   min-height: 50vh;
   max-height: 100%;
+  justify-content: center;
+  align-items: center;
 }
 .service {
   text-align: center;
-
-  padding: 4rem 2rem;
-  margin: 2rem;
+  margin: 2rem 2rem -2rem;
 
   /*box-shadow: 0px 5px 20px -4px rgba(0, 0, 0, 0.192);*/
 }
 .service h2 {
   color: #c064c4;
   padding-bottom: 2rem;
+}
+.service p {
+  color: var(--lighter-grey);
 }
 .service i {
   font-size: 5rem;
@@ -558,7 +561,7 @@ nav ul li a:hover {
 }
 #team .team-intro h2 {
   font-size: 3.2rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   color: var(--grey);
 }
 #team .team-intro p {
@@ -657,7 +660,7 @@ nav ul li a:hover {
 }
 #blog .blog-intro h2 {
   font-size: 3.2rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
   color: var(--grey);
 }
 #blog .blog-intro p {
@@ -769,7 +772,7 @@ nav ul li a:hover {
 .testimonial-container {
   position: absolute;
   max-width: 45.8rem;
-  max-height: 100%;
+  height: fit-content;
   left: 0;
   bottom: -22.5rem;
   background: #c164c4da;
@@ -807,7 +810,6 @@ nav ul li a:hover {
   padding: 12.5rem 0 13rem 0;
 }
 #contact h2 {
-  font-size: 6rem;
 }
 .form-container {
   padding: 4rem;
@@ -820,6 +822,20 @@ nav ul li a:hover {
   font-size: 2rem;
   color: var(--purple);
 }
+#contact .contact-intro {
+  text-align: center;
+  width: 50%;
+  height: 100%;
+  padding-bottom: 2.5rem;
+}
+#contact .contact-intro h2 {
+  color: var(--grey);
+  font-size: 6rem;
+  margin-bottom: 2rem;
+}
+#contact .contact-intro p {
+  color: var(--lighter-grey);
+}
 .form-info {
   flex: 1;
   display: flex;
@@ -830,8 +846,9 @@ form {
   flex: 2;
   width: 100%;
 }
-form .btn {
+.submit-btn {
   margin-top: 3rem;
+  cursor: pointer;
 }
 .text-input {
   display: flex;
@@ -847,7 +864,7 @@ form .btn {
   margin-right: 1.5rem;
 }
 .text-input input:nth-child(2) {
-  padding-left: 1.5rem;
+  padding: 1.5rem;
   margin-left: 1.5rem;
 }
 .text-input input::placeholder {
@@ -867,6 +884,7 @@ form #message {
   border: 1px solid rgba(177, 177, 177, 0.411);
 }
 .form-info h3 {
+  color: var(--grey);
   text-align: left;
   font-weight: 600;
   font-size: 2.6rem;
@@ -1102,8 +1120,9 @@ form #message {
     padding: 5rem 0;
   }
   .service {
-    margin: 0;
+    margin: 2rem;
   }
+
   .fixed-head .container1 {
     justify-content: space-between;
   }
@@ -1203,6 +1222,9 @@ form #message {
     padding: 5rem 0;
   }
   #blog .blog-intro {
+    width: 100%;
+  }
+  #contact .contact-intro {
     width: 100%;
   }
   .fixed-head .container1 img {
