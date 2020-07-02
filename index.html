@@ -13,34 +13,32 @@
     />
   </head>
   <body>
-    <!--<span id="btt">
-      <img
-        class="uparrow"
-        src="./icons/up-arrow_icon-icons.com_73351.ico"
-        alt=""
-      />
-    </span>-->
-    <div class="fixed-head">
+    <span id="btt">
+      <i class="fas fa-chevron-up"></i>
+    </span>
+    <header>
       <div class="container1">
-        <img src="./img/logo.png" alt="logo" />
         <nav>
-          <ul>
-            <li><a class="nav-links active" href="#">Home</a></li>
-            <li><a class="nav-links" href="#">Products</a></li>
-            <li><a class="nav-links" href="#services">Services</a></li>
-            <li><a class="nav-links" href="#portfolio">Portfolio</a></li>
-            <li><a class="nav-links" href="#team">Team</a></li>
-            <li><a class="nav-links" href="#">Blog</a></li>
-            <li><a class="nav-links" href="#">Contact</a></li>
-          </ul>
+          <div class="logo">
+            <img src="./img/logo.png" alt="logo" />
+          </div>
           <div class="ham">
             <span></span>
             <span></span>
             <span></span>
           </div>
+          <ul class="nav-links">
+            <li><a class="nav-links active" href="#">Home</a></li>
+            <li><a class="nav-links" href="#">Products</a></li>
+            <li><a class="nav-links" href="#services">Services</a></li>
+            <li><a class="nav-links" href="#portfolio">Portfolio</a></li>
+            <li><a class="nav-links" href="#team">Team</a></li>
+            <li><a class="nav-links" href="#blog">Blog</a></li>
+            <li><a class="nav-links" href="#">Contact</a></li>
+          </ul>
         </nav>
       </div>
-    </div>
+    </header>
     <section class="hero-section">
       <div class="container">
         <div class="img-box">
@@ -70,25 +68,15 @@
             <div class="social-icons">
               <ul>
                 <li>
-                  <a href="#"
-                    ><img
-                      src="./icons/FB_icon-icons.com_65534.ico"
-                      alt="facebook-icon"
-                  /></a>
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                </li>
+                <li>
+                  <a href="#"> <i class="fab fa-twitter"></i></a>
                 </li>
                 <li>
                   <a href="#">
-                    <img
-                      src="./icons/TWITTER_icon-icons.com_65536.ico"
-                      alt="twitter-icon"
-                  /></a>
-                </li>
-                <li>
-                  <a href="#">
-                    <img
-                      src="./icons/INSTAGRAM_icon-icons.com_65535.ico"
-                      alt="insta-icon"
-                  /></a>
+                    <i class="fab fa-instagram"></i>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -106,7 +94,9 @@
           </h2>
           <a href="#">View Collection</a>
         </div>
-        <div class="left-card"></div>
+        <div class="container1 left-card-container">
+          <div class="left-card"></div>
+        </div>
       </div>
       <div class="container1 collection-wrapper">
         <div class="right-card-content">
@@ -116,7 +106,9 @@
           </h2>
           <a href="#">View Collection</a>
         </div>
-        <div class="right-card"></div>
+        <div class="container1 left-card-container">
+          <div class="right-card"></div>
+        </div>
       </div>
     </section>
 
@@ -261,17 +253,117 @@
         </div>
         <div class="grid disp-flex-row">
           <div class="grid-item">
-            <img src="./img/team/michael-dam-mEZ3PoFGs_k-unsplash.jpg" alt="" />
-            <h3>Celina Gomez</h3>
-            <h4>FOUNDER</h4>
-            <div class="team-socials">
-              <i class="fab fa-facebook-f"></i>
-              <i class="fab fa-twitter"></i>
-              <i class="fab fa-instagram"></i>
+            <div class="blog-image-container">
+              <div class="blog-image bi1"></div>
+            </div>
+            <div class="blog-title">
+              <h3>Rowan an orangutan known <br />& loved</h3>
+              <h5><em>25 JULY, 2022</em></h5>
+            </div>
+            <div class="blog-author disp-flex-row">
+              <div class="author disp-flex-row">
+                <img src="/img/blog/admin.jpg" alt="" />
+                <h4>J.PARKER</h4>
+              </div>
+              <div class="interact disp-flex-row">
+                <i class="far fa-share-square"></i>
+                <i class="far fa-heart"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-item">
+            <div class="blog-image-container">
+              <div class="blog-image bi2"></div>
+            </div>
+            <div class="blog-title">
+              <h3>Rowan an orangutan known <br />& loved</h3>
+              <h5><em>25 JULY, 2022</em></h5>
+            </div>
+            <div class="blog-author disp-flex-row">
+              <div class="author disp-flex-row">
+                <img src="/img/blog/admin.jpg" alt="" />
+                <h4>J.PARKER</h4>
+              </div>
+              <div class="interact disp-flex-row">
+                <i class="far fa-share-square"></i>
+                <i class="far fa-heart"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-item">
+            <div class="blog-image-container">
+              <div class="blog-image bi3"></div>
+            </div>
+            <div class="blog-title">
+              <h3>Rowan an orangutan known <br />& loved</h3>
+              <h5><em>25 JULY, 2022</em></h5>
+            </div>
+            <div class="blog-author disp-flex-row">
+              <div class="author disp-flex-row">
+                <img src="/img/blog/admin.jpg" alt="" />
+                <h4>J.PARKER</h4>
+              </div>
+              <div class="interact disp-flex-row">
+                <i class="far fa-share-square"></i>
+                <i class="far fa-heart"></i>
+              </div>
             </div>
           </div>
         </div>
       </div>
+    </section>
+    <section id="contact">
+      <div class="container1 flex-aic-jcc">
+        <h2>Get In Touch</h2>
+        <div class="form-container disp-flex-row">
+          <div class="form-info">
+            <h3>Contact Info</h3>
+            <div class="phone-no disp-flex-row">
+              <i class="fas fa-phone"></i>
+              <h4>+88 1234 56789</h4>
+            </div>
+            <div class="email-address disp-flex-row">
+              <i class="fas fa-envelope"></i>
+              <h4>contact@yourmail.com</h4>
+            </div>
+            <div class="home-address disp-flex-row">
+              <i class="fas fa-home"></i>
+              <h4>203, Envato Labs, Behind Alis Steet,Australia</h4>
+            </div>
+          </div>
+          <form action="#">
+            <div class="text-input">
+              <input
+                type="text"
+                name="user-name"
+                id="user-name"
+                placeholder="Enter Your Name"
+              />
+              <input
+                type="text"
+                name="email"
+                id="email"
+                placeholder="Enter Your Name"
+              />
+            </div>
+            <div class="lower-input">
+              <textarea
+                name="message"
+                id="message"
+                placeholder="Enter Your Message"
+                cols="30"
+                rows="10"
+              ></textarea>
+              <input type="submit" class="btn" value="CONTACT NOW" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section id="footer">
+      <img src="./img/footer-bg.png" alt="" />
     </section>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
     <link
