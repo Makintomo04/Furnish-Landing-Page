@@ -99,11 +99,16 @@ h5 {
 }
 header {
   position: fixed;
+  top: 0;
   width: 100%;
   background: white;
   z-index: 100000;
   box-shadow: 0px 10px 10px -8px rgba(0, 0, 0, 0.014);
   min-height: 10rem;
+}
+
+.hero-section {
+  padding-top: 10rem;
 }
 .logo {
   align-items: center;
@@ -135,10 +140,10 @@ nav {
 .ham {
   display: flex;
   flex-direction: column;
+  cursor: pointer;
   /*position: absolute;
    right: 0;
   top: 50%;*/
-  transform: translateY(-50%);
 }
 .ham span {
   padding: 1.5px 15px;
@@ -167,10 +172,16 @@ nav ul li a {
 nav ul li a:hover {
   color: #c064c4;
 }
-.hero-section {
-  width: 100%;
+.mobile {
   display: flex;
-  height: calc(100vh-10rem);
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.hero-section {
+  max-width: 100%;
+  display: flex;
+  height: 85vh;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -215,14 +226,16 @@ nav ul li a:hover {
 .hero-section .content h1 {
   font-size: 9.2rem;
   position: relative;
-  line-height: 12rem;
+  line-height: 10rem;
   padding-bottom: 1rem;
+  color: var(--grey);
   /* animation: enter 0.5s ease;*/
   z-index: 2;
 }
 .hero-section .content p {
+  margin-top: 2rem;
   margin-bottom: 4rem;
-  color: #777777;
+  color: var(--lighter-grey);
 }
 .btn {
   color: white;
@@ -237,7 +250,7 @@ nav ul li a:hover {
 
   background: white;
 }
-.here::before {
+/* .here::before {
   content: "";
   position: absolute;
   bottom: 32.5px;
@@ -254,7 +267,7 @@ nav ul li a:hover {
   background: #c064c4;
   width: 320px;
   height: 10px;
-}
+} */
 .discount-sticker {
   width: 130px;
   height: 130px;
@@ -270,6 +283,7 @@ nav ul li a:hover {
 }
 .discount-sticker h2 {
   color: white;
+  line-height: 2.4rem;
 }
 .social-bar {
   display: flex;
@@ -320,6 +334,8 @@ nav ul li a:hover {
   margin: 2rem;
 }
 .view-collection .container1 {
+  justify-content: center;
+  display: flex;
 }
 .left-card {
   width: 55rem;
@@ -340,7 +356,6 @@ nav ul li a:hover {
   background-position: center;
   background-repeat: no-repeat;
   text-align: left;
-  padding: 0;
   transition: transform 0.4s ease;
   flex: 1 1 40rem;
 }
@@ -356,10 +371,7 @@ nav ul li a:hover {
   font-weight: 600;
   transition: color 0.25s ease-in-out;
 }
-.right-card:hover,
-.collection-wrapper:hover .right-card {
-  transform: scale(1.1);
-}
+
 .left-card:hover,
 .collection-wrapper:hover .left-card {
   transform: scale(1.1);
@@ -372,20 +384,29 @@ nav ul li a:hover {
 .left-card-content {
   position: absolute;
   z-index: 3;
-  top: 10rem;
-  left: 4rem;
-  text-align: left;
-}
-.right-card-content {
-  position: absolute;
-  z-index: 3;
-  top: 10rem;
+  top: 6rem;
   left: 4rem;
   text-align: left;
 }
 .left-card-content a:hover {
   color: #c064c4;
   transition: color 0.25s ease-in-out;
+}
+.right-card:hover,
+.collection-wrapper:hover .right-card {
+  transform: scale(1.1);
+}
+.right-card-container {
+  width: fit-content;
+  height: fit-content;
+  overflow: hidden;
+}
+.right-card-content {
+  position: absolute;
+  z-index: 3;
+  top: 6rem;
+  left: 4rem;
+  text-align: left;
 }
 .right-card-content a:hover {
   color: #c064c4;
@@ -420,6 +441,10 @@ nav ul li a:hover {
   height: auto;
   padding: 12.5rem 0 13rem 0;
   background: rgba(255, 246, 251, 1);
+}
+.intro-head {
+  width: 60%;
+  margin: auto;
 }
 .intro {
   display: flex;
@@ -772,7 +797,7 @@ nav ul li a:hover {
 .testimonial-container {
   position: absolute;
   max-width: 45.8rem;
-  height: fit-content;
+  max-height: auto;
   left: 0;
   bottom: -22.5rem;
   background: #c164c4da;
@@ -807,7 +832,7 @@ nav ul li a:hover {
 
 #contact {
   text-align: center;
-  padding: 12.5rem 0 13rem 0;
+  padding: 5rem 0 13rem 0;
 }
 #contact h2 {
 }
@@ -831,7 +856,7 @@ nav ul li a:hover {
 #contact .contact-intro h2 {
   color: var(--grey);
   font-size: 6rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 #contact .contact-intro p {
   color: var(--lighter-grey);
@@ -845,10 +870,17 @@ nav ul li a:hover {
 form {
   flex: 2;
   width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 .submit-btn {
   margin-top: 3rem;
   cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
 }
 .text-input {
   display: flex;
@@ -880,7 +912,7 @@ form #message {
   width: 100%;
   padding: 2rem 1.5rem 0;
   margin-top: 3rem;
-  background-color: rgba(241, 241, 241, 0.596);
+  background-color: rgba(241, 241, 241, 0.342);
   border: 1px solid rgba(177, 177, 177, 0.411);
 }
 .form-info h3 {
@@ -905,6 +937,85 @@ form #message {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+#user-name {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+#email {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* FOOTER SECTION */
+#footer {
+  width: 100%;
+  height: 50vh;
+  color: var(--lighter-grey);
+}
+#footer .container1 a {
+  font-weight: 400;
+  transition: color 0.2s ease-in-out;
+}
+#footer img {
+  transform: translateY(-12.5px);
+}
+#footer .container1 a:hover {
+  color: var(--purple);
+  font-weight: 400;
+  cursor: pointer;
+}
+#footer .container1 p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-bottom: 5rem;
+}
+#footer .footer-phone p,
+#footer .footer-email p,
+#footer .footer-address p {
+  margin-bottom: 0;
+}
+#footer .footer-phone li,
+#footer .footer-email li,
+#footer .footer-address li {
+  margin-bottom: 0;
+
+  padding-left: 3rem;
+}
+#footer .container1 i {
+  font-size: 1.6rem;
+  padding-right: 3rem;
+}
+#footer .container1 li {
+  padding-bottom: 1rem;
+  width: auto;
+}
+#footer .container1 {
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  text-align: left;
+}
+#footer .container1 div {
+  margin: 2rem;
+  min-width: 20rem;
+}
+#footer .container1 h3 {
+  font-size: 20px;
+  padding-bottom: 2rem;
+  color: var(--grey);
+}
+#footer div .footer-phone,
+#footer div .footer-email,
+#footer div .footer-address {
+  margin-left: 0;
+}
+/* #footer .container1 .footer-contact {
+} */
+#footer .container1 div .footer-socials {
+  margin-left: 0;
 }
 /*ANIMATIONS*/
 @keyframes enter {
@@ -957,6 +1068,12 @@ form #message {
   .container1 {
     width: 95%;
   }
+  .social-bar {
+    padding-left: 8rem;
+  }
+  .view-collection .collection-wrapper {
+    width: auto;
+  }
   .container {
     width: 100vw;
     max-width: 100%;
@@ -989,6 +1106,9 @@ form #message {
     max-width: 100%;
     justify-content: center;
   }
+  .view-collection .container1 {
+    margin-bottom: 10rem;
+  }
   .left-card-container {
     width: 100%;
     height: 100%;
@@ -1010,6 +1130,18 @@ form #message {
 }
 
 @media screen and (max-width: 1199px) {
+  .view-collection .container1 {
+    flex-wrap: wrap;
+  }
+  .view-collection .right-card,
+  .view-collection .left-card {
+    width: 100%;
+    max-width: 100%;
+    background-position-y: 80%;
+  }
+  .view-collection .collection-wrapper {
+    min-width: 100%;
+  }
   #team .grid .grid-item:last-child {
     margin-right: 1.5rem;
     margin-left: 1.5rem;
@@ -1036,18 +1168,34 @@ form #message {
   .container {
     width: 100vw;
     max-width: 100%;
+    height: 100%;
     flex-wrap: wrap;
     padding: 20px;
     margin: 0;
   }
-  .container .img-box {
-    display: none;
-  }
+
   .hero-section .content-box {
     justify-content: center;
+    background: var(--bg-purple);
   }
   .hero-section .content-box .content {
     margin: 0;
+  }
+  .hero-section .content-box .content h1 {
+    font-size: 7.2rem;
+    line-height: 7.2rem;
+  }
+  .social-icons i {
+    color: var(--purple);
+  }
+  .social-icons i:hover {
+    color: #fff;
+  }
+  .hero-section .content-box .content p {
+    color: black;
+    width: 90%;
+    margin: auto;
+    margin-bottom: 5rem;
   }
   .content-box {
     display: flex;
@@ -1055,14 +1203,20 @@ form #message {
     text-align: center;
     padding: 11rem 0;
   }
+  .hero-section {
+    height: 100%;
+  }
+  .view-collection {
+    padding: 0;
+  }
   .line {
     width: 10rem;
   }
   .discount-sticker {
-    top: 0.02rem;
+    top: 3rem;
     height: 100px;
     width: 100px;
-    right: 0;
+    right: -5rem;
   }
   .content .winter::before {
     width: 170px;
@@ -1084,7 +1238,7 @@ form #message {
     margin-top: 2rem;
     padding-bottom: 2rem;
   }
-  .social-icons ul li:first-child img {
+  .social-icons ul li:first-child a i {
     margin-left: 0;
   }
   .left-card,
@@ -1099,15 +1253,40 @@ form #message {
   .hero-section .content h1 {
     font-size: 4.8rem;
     line-height: 4rem;
+    padding-top: 5rem;
     padding-bottom: 1rem;
   }
   .ham span {
     opacity: 1;
     visibility: visible;
   }
+
   .nav-links {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: -200%;
+
+    left: 0;
+    right: 0;
+    height: auto;
+    justify-content: center;
+    background: white;
+    z-index: -10000;
+    transition: 0.3s ease;
+    box-shadow: 0px 15px 11px 3px rgba(0, 0, 0, 0.116);
   }
+  .nav-links.nav-reveal {
+    top: 5rem;
+    padding: 10rem;
+  }
+  .nav-links li {
+    margin: 3rem 3.6rem 0;
+  }
+  .nav-links li a {
+    font-size: 2.4rem;
+  }
+
   .service-container {
     width: 75%;
   }
@@ -1130,6 +1309,7 @@ form #message {
     justify-content: center;
     align-self: center;
     width: 100%;
+    margin-bottom: 5rem;
   }
   .intro h3 {
     padding: 5rem 0;
@@ -1163,9 +1343,27 @@ form #message {
     margin-left: 0;
   }
   .testimonial-container {
+    max-width: 100%;
+    width: 80vw;
     left: 50%;
     transform: translateX(-50%);
-    width: 100%;
+  }
+  .content-box {
+    padding: 0 0 11rem;
+  }
+  .view-collection .container1 {
+    margin-bottom: 3rem;
+  }
+  #services {
+    padding: 6rem 0 7rem 0;
+  }
+}
+@media screen and (max-width: 939px) {
+  .discount-sticker {
+    top: 3rem;
+    right: 2rem;
+    height: 80px;
+    width: 80px;
   }
 }
 @media screen and (max-width: 887px) {
@@ -1174,6 +1372,20 @@ form #message {
   }
   #team .grid .grid-item:nth-child(3) {
     margin-right: 1.5rem;
+  }
+  #contact .contact-intro h2 {
+    font-size: 4rem;
+  }
+  .testimonial-container {
+    max-width: 100%;
+    width: 80vw;
+  }
+  .hero-section .content-box .content h1 {
+    font-size: 6.4rem;
+  }
+  .discount-sticker {
+    top: 10rem;
+    right: 2rem;
   }
 }
 @media screen and (max-width: 640px) {
@@ -1206,6 +1418,10 @@ form #message {
     top: -50px;
     right: -25px;
   }
+  #services .intro-head {
+    width: 100%;
+    margin: auto;
+  }
   #team {
     padding: 5rem 0;
   }
@@ -1217,6 +1433,9 @@ form #message {
   }
   #team .grid .grid-item:last-child {
     margin-right: 1.5rem;
+  }
+  #blog .blog-intro h2 {
+    padding-top: 2rem;
   }
   #blog {
     padding: 5rem 0;
@@ -1243,9 +1462,7 @@ form #message {
   .fixed-head .container1 .ham:last-child {
     margin-bottom: 0;
   }
-  #contact h2 {
-    font-size: 4rem;
-  }
+
   .form-container {
     padding: 2rem;
   }
@@ -1255,6 +1472,16 @@ form #message {
   .test-content i {
     font-size: 4.8rem;
     margin-bottom: 2rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .discount-sticker {
+    top: -2rem;
+    right: 0rem;
+  }
+  .view-collection a {
+    padding: 0.5rem 0.75rem;
+    background: white;
   }
 }
 @media screen and (max-width: 420px) {

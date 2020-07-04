@@ -19,22 +19,24 @@
     <header>
       <div class="container1">
         <nav>
-          <div class="logo">
-            <img src="./img/logo.png" alt="logo" />
-          </div>
-          <div class="ham">
-            <span></span>
-            <span></span>
-            <span></span>
+          <div class="mobile">
+            <div class="logo">
+              <img src="./img/logo.png" alt="logo" />
+            </div>
+            <div class="ham" id="ham">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
           </div>
           <ul class="nav-links">
-            <li><a class="nav-links active" href="#">Home</a></li>
-            <li><a class="nav-links" href="#">Products</a></li>
-            <li><a class="nav-links" href="#services">Services</a></li>
-            <li><a class="nav-links" href="#portfolio">Portfolio</a></li>
-            <li><a class="nav-links" href="#team">Team</a></li>
-            <li><a class="nav-links" href="#blog">Blog</a></li>
-            <li><a class="nav-links" href="#">Contact</a></li>
+            <li><a class="nav-link" href="#">Home</a></li>
+            <li><a class="nav-link" href="#">Products</a></li>
+            <li><a class="nav-link" href="#services">Services</a></li>
+            <li><a class="nav-link" href="#portfolio">Portfolio</a></li>
+            <li><a class="nav-link" href="#team">Team</a></li>
+            <li><a class="nav-link" href="#blog">Blog</a></li>
+            <li><a class="nav-link" href="#contact">Contact</a></li>
           </ul>
         </nav>
       </div>
@@ -86,28 +88,30 @@
     </section>
 
     <section class="view-collection">
-      <div class="container1 collection-wrapper">
-        <div class="left-card-content">
-          <h2>
-            High-quality furnitures <br />
-            For your home
-          </h2>
-          <a href="#">View Collection</a>
+      <div class="container1 disp-flex-row">
+        <div class="collection-wrapper">
+          <div class="left-card-content">
+            <h2>
+              High-quality furnitures <br />
+              For your home
+            </h2>
+            <a href="#">View Collection</a>
+          </div>
+          <div class="left-card-container">
+            <div class="left-card"></div>
+          </div>
         </div>
-        <div class="container1 left-card-container">
-          <div class="left-card"></div>
-        </div>
-      </div>
-      <div class="container1 collection-wrapper">
-        <div class="right-card-content">
-          <h2>
-            Hot offer <br />
-            Discount up to 80%
-          </h2>
-          <a href="#">View Collection</a>
-        </div>
-        <div class="container1 left-card-container">
-          <div class="right-card"></div>
+        <div class="collection-wrapper">
+          <div class="right-card-content">
+            <h2>
+              Hot offer <br />
+              Discount up to 80%
+            </h2>
+            <a href="#">View Collection</a>
+          </div>
+          <div class="right-card-container">
+            <div class="right-card"></div>
+          </div>
         </div>
       </div>
     </section>
@@ -117,12 +121,14 @@
         <div class="intro">
           <div class="our-story-midline"></div>
           <h3>Our Story</h3>
-          <h2>Build Your Sweet Home</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusm od tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation.
-          </p>
+          <div class="intro-head">
+            <h2>Build Your Sweet Home</h2>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusm od tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation.
+            </p>
+          </div>
           <img src="./img/services/services.jpg" alt="" />
           <a class="btn readmore-btn" href="#">Read More</a>
         </div>
@@ -242,6 +248,24 @@
         </div>
       </div>
     </section>
+    <section id="testimonials">
+      <div class="container1 flex-aic-jcc">
+        <div class="testimonial-container">
+          <div class="test-content">
+            <i class="fas fa-quote-right"></i><br />
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo a
+              veritatis ea nihil corporis animi perferendis atque magni quas?
+            </p>
+            <div class="author-test">
+              <h4>Lisa White</h4>
+              <h5>DESIGNER, IKEA</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="vid"></div>
+    </section>
     <section id="blog">
       <div class="container1 flex-aic-jcc">
         <div class="blog-intro">
@@ -314,25 +338,7 @@
         </div>
       </div>
     </section>
-    <section id="testimonials">
-      <div class="container1 flex-aic-jcc">
-        <div class="testimonial-container">
-          <div class="test-content">
-            <i class="fas fa-quote-right"></i><br />
-            <p>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo a
-              veritatis ea nihil corporis animi perferendis atque magni quas
-              cum?
-            </p>
-            <div class="author-test">
-              <h4>Lisa White</h4>
-              <h5>DESIGNER, IKEA</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="vid"></div>
-    </section>
+
     <section id="contact">
       <div class="container1 flex-aic-jcc">
         <div class="contact-intro">
@@ -388,6 +394,66 @@
       </div>
     </section>
     <section id="footer">
+      <div class="container1">
+        <div class="flex">
+          <img src="./img/logo.png" alt="logo" />
+          <p>
+            Gravida nibh vel velit auctor aliquetn quibibendum auci elit cons
+            equat ipsutis sem nibh id elit.
+          </p>
+          <div class="footer-socials">
+            <a href=""><i class="fab fa-facebook-f"></i></a>
+            <a href=""><i class="fab fa-twitter"></i></a>
+            <a href=""><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="flex">
+          <h3>Services</h3>
+          <ul>
+            <li><a>Architechture Design</a></li>
+            <li><a>Interior Design</a></li>
+            <li><a>Autocad Services</a></li>
+            <li><a>Lighting Design</a></li>
+            <li><a>Poster Design</a></li>
+          </ul>
+        </div>
+        <div class="help flex">
+          <h3>Help</h3>
+          <ul>
+            <li><a>Forum</a></li>
+            <li><a>Blog</a></li>
+            <li><a>Help Center</a></li>
+            <li><a>Contact Us</a></li>
+            <li><a>Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact flex">
+          <h3>Contact Info</h3>
+          <div class="footer-phone disp-flex-row">
+            <p>Phone:</p>
+            <ul>
+              <li><p>+88123 4567 890</p></li>
+              <li><p>+88123 4567 890</p></li>
+            </ul>
+          </div>
+          <div class="footer-email disp-flex-row">
+            <p>Email:</p>
+            <ul>
+              <li><p>contact@yourmail.com</p></li>
+              <li><p>support@yourmail.com</p></li>
+            </ul>
+          </div>
+          <div class="footer-address disp-flex-row">
+            <p>Address:</p>
+            <ul>
+              <li><p>5078 Jensen Key, Port</p></li>
+              <li><p>Kaya, WV 73505</p></li>
+            </ul>
+          </div>
+        </div>
+        <div></div>
+        <div></div>
+      </div>
       <!-- <img src="./img/footer-bg.png" alt="" /> -->
     </section>
     <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js"></script>
