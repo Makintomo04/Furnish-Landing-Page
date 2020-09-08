@@ -21,7 +21,7 @@
 }
 html,
 body {
-  overflow-x: hidden;
+  overflow-x: initial;
 }
 html {
   font-size: 62.5%;
@@ -97,6 +97,9 @@ h5 {
   height: 3rem;
   margin: 1rem;
 }
+/* .greyarrow {
+  color: var(--main-text-color) !important;
+} */
 header {
   position: fixed;
   top: 0;
@@ -872,14 +875,12 @@ form {
   width: 100%;
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none;
 }
 .submit-btn {
   margin-top: 3rem;
   cursor: pointer;
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none;
   border-radius: 0;
 }
 .text-input {
@@ -941,12 +942,10 @@ form #message {
 #user-name {
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none;
 }
 #email {
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none;
 }
 
 /* FOOTER SECTION */
@@ -1265,20 +1264,28 @@ form #message {
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: -200%;
-
-    left: 0;
-    right: 0;
+    top: 0;
+    /* max-height: 100vh; */
+    /* left: 0; */
+    right: -200%;
     height: auto;
-    justify-content: center;
+    width: 100vw;
+    bottom: 0;
+    justify-content: flex-end;
+    text-align: right;
     background: white;
+    padding-bottom: 5rem;
     z-index: -10000;
-    transition: 0.3s ease;
+    transition: 0.2s ease;
     box-shadow: 0px 15px 11px 3px rgba(0, 0, 0, 0.116);
+    padding: 10rem 0rem 10rem 10rem;
   }
   .nav-links.nav-reveal {
-    top: 5rem;
-    padding: 10rem;
+    /* top: 5rem; */
+    width: 100vw;
+    right: 0px;
+    bottom: 0;
+    padding: 10rem 0rem 10rem 10rem;
   }
   .nav-links li {
     margin: 3rem 3.6rem 0;
@@ -1301,7 +1308,6 @@ form #message {
   .service {
     margin: 2rem;
   }
-
   .fixed-head .container1 {
     justify-content: space-between;
   }
